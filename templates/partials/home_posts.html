@@ -2,6 +2,10 @@
 {% for page in posts.pages | slice(end=10) %}
 <article class="post-entry">
   <header class="entry-header">
+      {% if page.extra.cover_image %}
+      <img src="{{ page.path }}/images/{{ page.extra.cover_image }}" />
+      </br>
+      {% endif %}
       <h2>{{ page.title }}</h2>
   </header>
   {% if page.summary %}
