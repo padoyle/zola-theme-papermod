@@ -23,12 +23,6 @@
       {% endif %}
   </header>
 
-  {% if page.extra.cover_image %}
-  <div class="post-content">
-      <img src="images/{{ page.extra.cover_image}}" />
-  </div>
-  {% endif %}
-
   {% if config.extra.papermod.show_toc | default(value=true) %}
   {% include "partials/toc.html" %}
   {% endif %}
